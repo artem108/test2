@@ -1,0 +1,52 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "http://artem108.github.io/test2",
+  "dependencies": {
+    "immutable": "^3.8.2",
+    "node-sass-chokidar": "^0.0.3",
+    "npm-run-all": "^4.0.2",
+    "react": "^16.2.0",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-dom": "^16.2.0",
+    "react-native-tts": "^1.4.1",
+    "react-redux": "^5.0.6",
+    "react-router": "^3.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.11",
+    "react-timeout": "^1.0.1",
+    "react-voice-components": "^1.0.0",
+    "react-waypoint": "^7.1.0",
+    "redux": "^3.7.2",
+    "source-map": "^0.6.1",
+    "styled-components": "^2.2.0"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "npm run build&&gh-pages -d build"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "brain.js": "^0.7.0",
+    "eslint": "^4.6.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-config-rallycoding": "^3.2.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "gh-pages": "^1.0.0",
+    "mnist": "git+https://github.com/ApelSYN/mnist.git",
+    "webpack": "^3.8.1"
+  }
+}
