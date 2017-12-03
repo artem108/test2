@@ -65,24 +65,21 @@ class Forms extends Component {
       this.setState({errorVvc: false})
     }
 
-    if (this.state.post === '') {
-      this.setState({
-        post: 'cant be empty',
-        errorsPost: true
-      })
-
-    } else if (this.state.post.search(regEmail) == '-1') {
+    if (this.state.storeCard) {
+      if (this.state.post === '') {
         this.setState({
-          post: 'enter right value',
+          post: 'cant be empty',
           errorsPost: true
         })
-    } else {
-      this.setState({errorsPost: false})
-    }
 
-    if (!this.state.errorNum && !this.state.errorDate &&
-        !this.state.errorVvc && !this.state.errorsPost) {
-          this.setState({complete: true})
+      } else if (this.state.post.search(regEmail) == '-1') {
+          this.setState({
+            post: 'enter right value',
+            errorsPost: true
+          })
+      } else {
+        this.setState({errorsPost: false})
+      }
     }
   }
 
