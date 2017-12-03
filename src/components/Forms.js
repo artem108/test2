@@ -23,6 +23,7 @@ class Forms extends Component {
   onChange(e) {
     let value = e.target.value
     let name = e.target.name
+
     this.setState({[ name ]: `${value}`})
   }
 
@@ -82,8 +83,6 @@ class Forms extends Component {
       }
     }
   }
-
-
 
   render() {
     return (
