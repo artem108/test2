@@ -79,10 +79,9 @@ class Forms extends Component {
     } else {
       this.setState({errorsPost: false})
     }
-    console.log(this.state.errorNum);
-    if (this.state.errorNum && this.state.errorDate &&
-        this.state.errorVvc && this.state.errorsPost) {
-          console.log('ok');
+
+    if (!this.state.errorNum && !this.state.errorDate &&
+        !this.state.errorVvc && !this.state.errorsPost) {
           this.setState({complete: true})
     }
   }
